@@ -29,7 +29,8 @@ namespace eShopCKC.Infrastructure
             builder.ToTable("CatalogBrand");
             builder.HasKey(cb => cb.Id);
             builder.Property(cb => cb.Id)
-                .UseHiLo("Catalog_brand_hilo")
+                //.UseHiLo("Catalog_brand_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
             builder.Property(cb => cb.Brand)
                 .IsRequired()
@@ -41,7 +42,8 @@ namespace eShopCKC.Infrastructure
             builder.ToTable("CatalogType");
             builder.HasKey(ct => ct.Id);
             builder.Property(ct => ct.Id)
-                .UseHiLo("Catalog_type_hilo")
+                //.UseHiLo("Catalog_type_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
             builder.Property(ct => ct.Type)
                 .IsRequired()
@@ -52,7 +54,8 @@ namespace eShopCKC.Infrastructure
         {
             builder.ToTable("Catalog");
             builder.Property(ci => ci.Id)
-                .UseHiLo("Catalog_hilo")
+                //.UseHiLo("Catalog_hilo")
+                .UseIdentityColumn()
                 .IsRequired();
 
             builder.Property(ci => ci.Name)

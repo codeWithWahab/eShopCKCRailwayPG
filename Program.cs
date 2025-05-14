@@ -21,7 +21,11 @@ namespace eShopCKC
                     {
                         try
                         {
-                            c.UseSqlServer("Server=yourservername;Integrated Security=true;Initial Catalog=CatalogDbCKC;Encrypt=False;");
+                            //c.UseSqlServer("Server=yourservername;Integrated Security=true;Initial Catalog=CatalogDbCKC;Encrypt=False;");
+                            //c.UseNpgsql("Host=localhost;Port=5432;Database=CatalogDbCKC;Username=Postgres;Password=123456");
+                            //c.UseNpgsql("Host=localhost;Port=5432;Database=CatalogDbCKC;Username=postgres;Password=123456;");
+                            c.UseNpgsql("Host=crossover.proxy.rlwy.net;Port=32134;Database=CatalogDbCKC;Username=postgres;Password=XdgBCekZwQrXxmwHgnclOpZsdExzEWeP;");
+
                         }
                         catch (Exception)
                         {
